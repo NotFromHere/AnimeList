@@ -6,7 +6,7 @@ import com.example.anime_app.domain.entity.Anime
 class AnimeTopUseCase(
     private val animeRepository: AnimeRepository
 ) {
-    fun getTopList(): List<Anime>{
+    suspend fun getTopList(): List<Anime>{
         val list = animeRepository.getTop50List()
         val newList: ArrayList<Anime> = ArrayList()
         list?.forEach { animeOfResponse ->

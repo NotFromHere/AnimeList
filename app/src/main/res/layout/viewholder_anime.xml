@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="40dp">
 
     <ImageView
-        android:id="@+id/vh_imageView"
+        android:id="@+id/imageView_vh"
         android:layout_width="120dp"
         android:layout_height="180dp"
         android:background="@color/c_purple"
@@ -15,13 +15,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/vh_textView"
+        android:id="@+id/textView_vh_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_activity_anime_name"
-        android:textSize="32sp"
+        android:text="@string/main_activity_vh_anime_name"
+        android:textSize="24sp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toEndOf="@+id/vh_imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView_vh"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_vh_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/main_activity_vh_anime_rating"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_vh"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_vh_episodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/main_activity_vh_anime_episodes"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView_vh"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,5 +5,5 @@ import com.example.anime_app.data.api.Top
 
 interface AnimeRepository {
 
-    fun getTop50List(): List<Top>?
+    suspend fun getTop50List(): List<Top>?
 }

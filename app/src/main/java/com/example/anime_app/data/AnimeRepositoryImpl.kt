@@ -11,6 +11,6 @@ class AnimeRepositoryImpl: AnimeRepository {
         RetrofitClient.retrofit.create(AnimeService::class.java)
     }
 
-    override fun getTop50List(): List<Top>? = animeServiceApi.getTop50List().top
+    override suspend fun getTop50List(): List<Top>? = animeServiceApi.getTop50List().top
 
 }
