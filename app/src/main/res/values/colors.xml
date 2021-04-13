@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- c_ - custom -->
+    <color name="c_dark_purple">#100b20</color>
+    <color name="c_purple">#782fea</color>
+    <color name="c_yellow">#ffdd4f</color>
+    <color name="c_dirty_light_blue">#a4acb9</color>
+    <color name="c_light_orange">#ef8262</color>
+</resources>

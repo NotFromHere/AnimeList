@@ -1,0 +1,5 @@
+main_background = #100b20
+button_1 = #ef8262
+icon_star = #ffdd4f
+icon_select = #782fea
+icon_unselect = #a4acb9

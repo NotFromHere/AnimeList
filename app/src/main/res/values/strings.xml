@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">anime_app</string>
+    <string name="main_activity_anime_name">Anime</string>
+</resources>
