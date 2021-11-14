@@ -14,5 +14,11 @@
         <!-- Customize your theme here. -->
         <item name="android:background">?attr/colorPrimaryVariant</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
+
+    </style>
+
+    <style name="Theme.Anime_app.NoActionBar" parent="Theme.Anime_app">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 </resources>

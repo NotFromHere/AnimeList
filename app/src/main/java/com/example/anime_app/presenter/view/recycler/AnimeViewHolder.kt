@@ -3,28 +3,37 @@ package com.example.anime_app.presenter.view.recycler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.anime_app.R
 import com.example.anime_app.domain.entity.Anime
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.viewholder_anime.view.*
 
 class AnimeViewHolder(
-        override val containerView: View
-) : RecyclerView.ViewHolder(containerView), LayoutContainer {
+        val containerView: View,
+        val callback: (()->Unit)
+) : RecyclerView.ViewHolder(containerView){
 
     fun bind(anime: Anime){
-        containerView.textView_vh_name.text = anime.name
-        containerView.textView_vh_rating.text = anime.rating.toString()
-        containerView.textView_vh_episodes.text = anime.episodes.toString()
+        setData(anime)
+        containerView.setOnClickListener {
+            callback.invoke()
+        }
+    }
+
+    private fun setData(anime: Anime) {
+        containerView.findViewById<TextView>(R.id.textView_vh_name).text = anime.name
+        containerView.findViewById<TextView>(R.id.textView_vh_rating).text = anime.rating.toString()
+        containerView.findViewById<TextView>(R.id.textView_vh_episodes).text =
+            anime.episodes.toString()
     }
 
     companion object {
-        fun create(parent: ViewGroup): AnimeViewHolder {
+        fun create(parent: ViewGroup, callback: (()->Unit)): AnimeViewHolder {
             return AnimeViewHolder(
                     LayoutInflater
                             .from(parent.context)
-                            .inflate(R.layout.viewholder_anime, parent, false))
+                            .inflate(R.layout.viewholder_anime, parent, false), callback)
         }
     }
 }
