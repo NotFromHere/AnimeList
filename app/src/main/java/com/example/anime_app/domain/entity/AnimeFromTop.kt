@@ -1,7 +1,9 @@
 package com.example.anime_app.domain.entity
 
-data class Anime(
+data class AnimeFromTop(
     val name: String?,
     val episodes: Int?,
-    val rating: Double?
+    val rating: Double?,
+    val mal_id: Int?,
+    val url: String?
 )

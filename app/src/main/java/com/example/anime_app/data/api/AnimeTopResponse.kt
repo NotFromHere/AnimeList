@@ -2,7 +2,7 @@ package com.example.anime_app.data.api
 import com.google.gson.annotations.SerializedName
 
 
-data class AnimeResponse(
+data class AnimeTopResponse(
     @SerializedName("request_cache_expiry")
     var requestCacheExpiry: Int?,
     @SerializedName("request_cached")

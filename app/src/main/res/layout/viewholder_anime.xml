@@ -10,7 +10,7 @@
         android:id="@+id/imageView_vh"
         android:layout_width="120dp"
         android:layout_height="180dp"
-        android:background="@color/c_purple"
+        android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
