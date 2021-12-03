@@ -5,5 +5,6 @@ data class AnimeFromTop(
     val episodes: Int?,
     val rating: Double?,
     val mal_id: Int?,
-    val url: String?
+    val url: String?,
+    val type: String?
 )

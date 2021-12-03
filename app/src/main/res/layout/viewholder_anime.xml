@@ -2,48 +2,80 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="190dp"
     android:layout_marginBottom="40dp">
 
-    <ImageView
-        android:id="@+id/imageView_vh"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_id"
         android:layout_width="120dp"
-        android:layout_height="180dp"
-        android:scaleType="centerInside"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/imageView_vh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_rv_anime_title"
+        android:layout_width="180dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/main_activity_vh_anime_name"
+        android:textAlignment="textStart"
+        app:autoSizeMaxTextSize="44sp"
+        app:autoSizeMinTextSize="4sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/cv_id"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_vh_name"
+        android:id="@+id/tv_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_activity_vh_anime_name"
-        android:textSize="24sp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView_vh"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_type"
+        app:layout_constraintStart_toEndOf="@+id/cv_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rv_anime_title" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@+id/textView_vh_episodes"
+        app:layout_constraintTop_toTopOf="@+id/textView_vh_episodes" />
 
     <TextView
         android:id="@+id/textView_vh_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/main_activity_vh_anime_rating"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView_vh"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="8dp"
+        android:text="@string/tv_rating_value"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView_vh_episodes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="@string/main_activity_vh_anime_episodes"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView_vh"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/cv_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type" />
 </androidx.constraintlayout.widget.ConstraintLayout>

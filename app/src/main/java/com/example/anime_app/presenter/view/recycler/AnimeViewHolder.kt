@@ -1,5 +1,6 @@
 package com.example.anime_app.presenter.view.recycler
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,13 +23,15 @@ class AnimeViewHolder(
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setData(animeFromTop: AnimeFromTop) {
-        containerView.findViewById<TextView>(R.id.textView_vh_name).text = animeFromTop.name
+        containerView.findViewById<TextView>(R.id.tv_rv_anime_title).text = animeFromTop.name
         containerView.findViewById<TextView>(R.id.textView_vh_rating).text = animeFromTop.rating.toString()
-        containerView.findViewById<TextView>(R.id.textView_vh_episodes).text = animeFromTop.episodes.toString()
+        containerView.findViewById<TextView>(R.id.textView_vh_episodes).text = animeFromTop.episodes.toString() + " episodes"
+        containerView.findViewById<TextView>(R.id.tv_type).text = animeFromTop.type.toString()
         Picasso.get()
             .load(animeFromTop.url)
-            .placeholder(R.drawable.ic_launcher_background)
+            .placeholder(R.drawable.anime_list_logo)
             .error(R.drawable.ic_home_black_24dp)
             .fit()
             .into(containerView.findViewById<ImageView>(R.id.imageView_vh))
