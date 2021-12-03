@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".presenter.view.AnimeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/imageView_anime_poster"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="32dp"
+                android:background="@color/c_purple"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.485"
+                app:layout_constraintStart_toEndOf="@+id/imageView_anime_poster"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_anime_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="371dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_score_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="1"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="405dp"
+                    tools:layout_editor_absoluteY="50dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rank"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="384dp"
+                    tools:layout_editor_absoluteY="74dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_rank_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="2"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="405dp"
+                    tools:layout_editor_absoluteY="98dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_popularity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popularity"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="357dp"
+                    tools:layout_editor_absoluteY="122dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_popularity_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="3"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="405dp"
+                    tools:layout_editor_absoluteY="146dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_members"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Members"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="360dp"
+                    tools:layout_editor_absoluteY="170dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_members_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="4"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="405dp"
+                    tools:layout_editor_absoluteY="194dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_favorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favorites"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="362dp"
+                    tools:layout_editor_absoluteY="218dp" />
+
+                <TextView
+                    android:id="@+id/tv_anime_favorites_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:text="5"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="405dp"
+                    tools:layout_editor_absoluteY="242dp" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_anime_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_anime_type"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Type"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_anime_status"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ongoing"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_anime_episodes"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Episodes"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_anime_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_anime_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Synopsis"
+            android:isScrollContainer="true"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/bt_add_like"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:text="@string/add" />
+
+    </LinearLayout>
+</ScrollView>

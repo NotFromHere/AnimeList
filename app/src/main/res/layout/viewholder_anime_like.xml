@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="30dp">
+        <ImageView
+            android:id="@+id/imageView_anime_like"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/tv_anime_like_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imageView_anime_like"
+            android:layout_alignParentBottom="false"
+            android:text="@string/main_activity_vh_anime_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="20dp"
+            android:shadowColor="@color/black"
+            android:shadowRadius="10"
+            app:autoSizeMaxTextSize="44sp"
+            app:autoSizeMinTextSize="4sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
