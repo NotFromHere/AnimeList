@@ -3,13 +3,10 @@ package com.example.anime_app.presenter.view
 import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.opengl.Visibility
 import android.os.Build
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.os.Environment
-import android.text.format.Time
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View

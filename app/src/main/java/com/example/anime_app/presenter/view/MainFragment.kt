@@ -1,5 +1,6 @@
 package com.example.anime_app.presenter.view
 
+import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,6 +14,10 @@ import com.example.anime_app.databinding.FragmentMainBinding
 import com.example.anime_app.presenter.view.recycler.AnimeRecyclerAdapter
 import com.example.anime_app.presenter.viewmodel.MainViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
+import android.widget.Toast
+
 
 class MainFragment : Fragment() {
 
@@ -55,8 +60,32 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        init()
-        initListeners()
+        if (hasConnection()) {
+            init()
+            initListeners()
+        } else {
+            Toast.makeText(activity, "no internet connection", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun hasConnection(): Boolean {
+        val cm = activity?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        var wifiInfo = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
+        if (wifiInfo != null && wifiInfo.isConnected())
+        {
+            return true;
+        }
+        wifiInfo = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        if (wifiInfo != null && wifiInfo.isConnected())
+        {
+            return true;
+        }
+        wifiInfo = cm.getActiveNetworkInfo();
+        if (wifiInfo != null && wifiInfo.isConnected())
+        {
+            return true;
+        }
+        return false;
     }
 
     private fun initListeners() {
