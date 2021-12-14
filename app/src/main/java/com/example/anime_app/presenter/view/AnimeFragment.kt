@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import com.example.anime_app.R
 import com.example.anime_app.databinding.FragmentAnimeBinding
@@ -36,6 +37,7 @@ class AnimeFragment : Fragment() {
 
     companion object {
         fun newInstance() = AnimeFragment()
+        const val ANIME_ID_BUNDLE = "ANIME_ID_TO_EPISODES"
     }
 
     private lateinit var viewModel: AnimeViewModel
@@ -144,6 +146,14 @@ class AnimeFragment : Fragment() {
             } else {
                 Toast.makeText(activity, "No access to internal storage", Toast.LENGTH_SHORT).show()
             }
+        }
+        binding.btEpisodes.setOnClickListener {
+                val episodesFragment = EpisodesFragment()
+                parentFragmentManager.setFragmentResult(ANIME_ID_BUNDLE, bundleOf(Pair("anime_id", animeId)))
+                parentFragmentManager.beginTransaction()
+                    .add(this.id, episodesFragment)
+                    .addToBackStack("backstack_anime_episodes")
+                    .commit()
         }
     }
 

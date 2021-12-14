@@ -12,4 +12,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="add">Add</string>
+    <string name="episode_name">Episode name</string>
+    <string name="episodes">Episodes</string>
 </resources>

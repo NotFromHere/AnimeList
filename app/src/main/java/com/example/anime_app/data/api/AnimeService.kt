@@ -14,4 +14,7 @@ interface AnimeService {
     @GET("search/anime?page=1")
     suspend fun getAnimeByName(@Query("q")animeName: String): AnimeByNameResponse
 
+    @GET("anime/{id}/episodes/{page}")
+    suspend fun getEpisodes(@Path("id")animeId: Int, @Path("page")page: Int): EpisodesResponse
+
 }
