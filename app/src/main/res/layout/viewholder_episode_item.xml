@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:gravity="center"
+    android:id="@+id/layout"
+    app:flow_verticalAlign="center"
+    android:background="#31FFFFFF"
+    android:layout_marginBottom="8dp">
+
+
+    <TextView
+        android:id="@+id/tv_episode_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="1"
+        android:textAlignment="center"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:textSize="20sp"
+        android:background="@android:color/transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="10"
+        android:background="@android:color/transparent">
+        <TextView
+            android:id="@+id/tv_episode_title"
+            android:layout_width="match_parent"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeMinTextSize="4sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:shadowColor="@color/black"
+            android:shadowRadius="10"/>
+
+        <TextView
+            android:id="@+id/tv_episode_title_romanji"
+            android:layout_width="wrap_content"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeMinTextSize="4sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:shadowColor="@color/black"
+            android:shadowRadius="10"
+            />
+
+        <TextView
+            android:id="@+id/tv_episode_title_japanese"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:autoSizeMaxTextSize="16sp"
+            app:autoSizeMinTextSize="4sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            android:textColor="@android:color/holo_blue_dark"
+            android:background="@android:color/transparent"
+            android:shadowColor="@color/black"
+            android:shadowRadius="10"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_episode_data"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeMinTextSize="4sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:layout_weight="4"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"/>
+</LinearLayout>
