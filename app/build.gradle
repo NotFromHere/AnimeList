@@ -69,4 +69,5 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     kapt 'com.android.databinding:compiler:3.1.4'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
 }

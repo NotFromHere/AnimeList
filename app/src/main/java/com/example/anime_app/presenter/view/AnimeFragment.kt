@@ -38,6 +38,8 @@ class AnimeFragment : Fragment() {
     companion object {
         fun newInstance() = AnimeFragment()
         const val ANIME_ID_BUNDLE = "ANIME_ID_TO_EPISODES"
+        const val ANIME_ID_BUNDLE_VIDEOS = "ANIME_ID_TO_VIDEOS"
+        const val ANIME_ID_BUNDLE_PICTURES = "ANIME_ID_TO_PICTURES"
     }
 
     private lateinit var viewModel: AnimeViewModel
@@ -152,8 +154,24 @@ class AnimeFragment : Fragment() {
                 parentFragmentManager.setFragmentResult(ANIME_ID_BUNDLE, bundleOf(Pair("anime_id", animeId)))
                 parentFragmentManager.beginTransaction()
                     .add(this.id, episodesFragment)
-                    .addToBackStack("backstack_anime_episodes")
+                    .addToBackStack(null)
                     .commit()
+        }
+        binding.btVideos.setOnClickListener {
+            val videosFragment = VideosFragment()
+            parentFragmentManager.setFragmentResult(ANIME_ID_BUNDLE_VIDEOS, bundleOf(Pair("anime_id", animeId)))
+            parentFragmentManager.beginTransaction()
+                .add(this.id, videosFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+        binding.btPictures.setOnClickListener {
+            val picturesFragment = PicturesFragment()
+            parentFragmentManager.setFragmentResult(ANIME_ID_BUNDLE_PICTURES, bundleOf(Pair("anime_id", animeId)))
+            parentFragmentManager.beginTransaction()
+                .add(this.id, picturesFragment)
+                .addToBackStack(null)
+                .commit()
         }
     }
 

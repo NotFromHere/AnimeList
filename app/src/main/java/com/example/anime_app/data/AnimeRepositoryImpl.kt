@@ -1,10 +1,6 @@
 package com.example.anime_app.data
 
-import android.content.Context
-import androidx.room.Room
 import com.example.anime_app.data.api.*
-import com.example.anime_app.data.room.AppDatabase
-import com.example.anime_app.data.room.entity.AnimeLikeFromCash
 
 class AnimeRepositoryImpl(): AnimeRepository {
 
@@ -31,4 +27,7 @@ class AnimeRepositoryImpl(): AnimeRepository {
         }
         return list
     }
+    override suspend fun getVideos(animeId: Int): List<Promo>? =  animeServiceApi.getVideos(animeId).promo
+    override suspend fun getPictures(animeId: Int): List<Picture>? = animeServiceApi.getPictures(animeId).pictures
+
 }

@@ -203,11 +203,12 @@
             android:isScrollContainer="true"
             android:textAlignment="center"/>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:columnCount="2">
             <Button
                 android:id="@+id/bt_add_like"
                 android:layout_width="120dp"
@@ -228,7 +229,29 @@
                 android:background="@color/white"
                 android:text="@string/episodes"
                 android:layout_marginStart="16dp"/>
-        </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_videos"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:text="@string/videos"
+                android:layout_marginStart="16dp"/>
+
+            <Button
+                android:id="@+id/bt_pictures"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:text="@string/pictures"
+                android:layout_marginStart="16dp"/>
+        </GridLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -1,10 +1,6 @@
 package com.example.anime_app.data
 
-import com.example.anime_app.data.api.AnimeInfoResponse
-import com.example.anime_app.data.api.ByName
-import com.example.anime_app.data.api.Episode
-import com.example.anime_app.data.api.Top
-import com.example.anime_app.data.room.entity.AnimeLikeFromCash
+import com.example.anime_app.data.api.*
 
 interface AnimeRepository {
 
@@ -15,4 +11,8 @@ interface AnimeRepository {
     suspend fun getByName(animeName: String): List<ByName>?
 
     suspend fun getEpisodes(animeId: Int): List<Episode>
+
+    suspend fun getVideos(animeId: Int): List<Promo>?
+
+    suspend fun getPictures(animeId: Int): List<Picture>?
 }
