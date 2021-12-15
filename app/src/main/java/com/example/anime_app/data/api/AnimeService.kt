@@ -23,4 +23,7 @@ interface AnimeService {
     @GET("anime/{id}/pictures")
     suspend fun getPictures(@Path("id")animeId: Int): PicturesResponse
 
+    @GET("anime/{id}/reviews")
+    suspend fun getReviews(@Path("id")animeId: Int): ReviewsResponse
+
 }

@@ -20,6 +20,7 @@ import androidx.core.graphics.drawable.toBitmap
 import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import com.example.anime_app.R
+import com.example.anime_app.data.api.Review
 import com.example.anime_app.databinding.FragmentAnimeBinding
 import com.example.anime_app.presenter.viewmodel.AnimeViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -40,6 +41,7 @@ class AnimeFragment : Fragment() {
         const val ANIME_ID_BUNDLE = "ANIME_ID_TO_EPISODES"
         const val ANIME_ID_BUNDLE_VIDEOS = "ANIME_ID_TO_VIDEOS"
         const val ANIME_ID_BUNDLE_PICTURES = "ANIME_ID_TO_PICTURES"
+        const val ANIME_ID_BUNDLE_REVIEWS = "ANIME_ID_TO_REVIEWS"
     }
 
     private lateinit var viewModel: AnimeViewModel
@@ -170,6 +172,15 @@ class AnimeFragment : Fragment() {
             parentFragmentManager.setFragmentResult(ANIME_ID_BUNDLE_PICTURES, bundleOf(Pair("anime_id", animeId)))
             parentFragmentManager.beginTransaction()
                 .add(this.id, picturesFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+
+        binding.btReviews.setOnClickListener {
+            val reviewsFragment = ReviewsFragment()
+            parentFragmentManager.setFragmentResult(ANIME_ID_BUNDLE_REVIEWS, bundleOf(Pair("anime_id", animeId)))
+            parentFragmentManager.beginTransaction()
+                .add(this.id, reviewsFragment)
                 .addToBackStack(null)
                 .commit()
         }

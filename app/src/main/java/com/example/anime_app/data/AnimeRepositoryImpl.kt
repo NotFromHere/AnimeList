@@ -29,5 +29,6 @@ class AnimeRepositoryImpl(): AnimeRepository {
     }
     override suspend fun getVideos(animeId: Int): List<Promo>? =  animeServiceApi.getVideos(animeId).promo
     override suspend fun getPictures(animeId: Int): List<Picture>? = animeServiceApi.getPictures(animeId).pictures
+    override suspend fun getReviews(animeId: Int): List<Review>? = animeServiceApi.getReviews(animeId).reviews
 
 }

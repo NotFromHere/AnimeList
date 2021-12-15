@@ -15,4 +15,6 @@ interface AnimeRepository {
     suspend fun getVideos(animeId: Int): List<Promo>?
 
     suspend fun getPictures(animeId: Int): List<Picture>?
+
+    suspend fun getReviews(animeId: Int): List<Review>?
 }
